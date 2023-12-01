@@ -1,0 +1,17 @@
+[package]
+name = "codetest"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0"
+axum = { version = "0.6", features = ["headers"] }
+bigdecimal = "0.3"
+derives = { path = "derives" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+hyper = { version = "0.14", features = ["full"] }
+tokio = { version = "1.24.2", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+sqlx = { version = "0.6", features = [ "runtime-tokio-native-tls", "mysql", "bigdecimal" ] }
